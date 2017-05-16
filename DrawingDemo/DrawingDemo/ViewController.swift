@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
     }
 
-    //ve khi keo
+    //ve khi luot
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first {
