@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 private enum ScreenState {
     case none
@@ -90,20 +91,18 @@ extension LoginViewController {
             ]
         ]
         
-        Alamofire.request(address, method: .post, parameters: params, encoding: JSONEncoding.default)
-        .responseJSON { (response) in
-            //print(response.response)
-            //print(response.data)
-            //print(response.result)
-            
-            if let json = response.result.value {
-                
-                let json = JSON(json)
+        Alamofire.request(address, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                //print("JSON: \(json)")
                 username = json["user"]["username"].stringValue
-                self.performSegue(withIdentifier: "welcomeScreen", sender: self)
+                self.performSegue(withIdentifier: "segue2", sender: self)
+            case .failure( _):
+                SVProgressHUD.showError(withStatus: "Email or Password does not correct!")
+                SVProgressHUD.dismiss(withDelay: 5)
                 
             }
-            
         }
     }
     
@@ -126,7 +125,7 @@ extension LoginViewController {
                 if let json = response.result.value {
                     let json = JSON(json)
                     username = json["user"]["username"].stringValue
-                    self.performSegue(withIdentifier: "welcomeScreen", sender: self)
+                    self.performSegue(withIdentifier: "segue2", sender: self)
                 }
         }
     }

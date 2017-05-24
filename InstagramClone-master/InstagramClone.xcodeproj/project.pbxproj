@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		14499F8005CE3C929896BF78 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95099372FC31BCA775DBFF4E /* Pods_InstagramClone.framework */; };
-		2F0F8AFF1EC9A5B200CDD64D /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F8AFE1EC9A5B200CDD64D /* WelcomeScreenViewController.swift */; };
+		2F144FD41ED4341B00B73F05 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F144FD31ED4341B00B73F05 /* FeedViewController.swift */; };
+		2F144FD61ED4408300B73F05 /* AllFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F144FD51ED4408300B73F05 /* AllFeedsViewController.swift */; };
+		2F144FD81ED440A200B73F05 /* MyprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F144FD71ED440A200B73F05 /* MyprofileViewController.swift */; };
+		2F144FDA1ED440B400B73F05 /* AddimageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F144FD91ED440B400B73F05 /* AddimageViewController.swift */; };
+		2F144FDC1ED4448A00B73F05 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F144FDB1ED4448A00B73F05 /* TableViewCell.swift */; };
 		8DF34C1F1EC3212C00F93D8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF34C1E1EC3212C00F93D8D /* AppDelegate.swift */; };
 		8DF34C211EC3212C00F93D8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF34C201EC3212C00F93D8D /* ViewController.swift */; };
 		8DF34C241EC3212C00F93D8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DF34C221EC3212C00F93D8D /* Main.storyboard */; };
@@ -19,7 +23,11 @@
 
 /* Begin PBXFileReference section */
 		067452C54D084541C902ECB6 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
-		2F0F8AFE1EC9A5B200CDD64D /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		2F144FD31ED4341B00B73F05 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2F144FD51ED4408300B73F05 /* AllFeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFeedsViewController.swift; sourceTree = "<group>"; };
+		2F144FD71ED440A200B73F05 /* MyprofileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyprofileViewController.swift; sourceTree = "<group>"; };
+		2F144FD91ED440B400B73F05 /* AddimageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddimageViewController.swift; sourceTree = "<group>"; };
+		2F144FDB1ED4448A00B73F05 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8DF34C1B1EC3212C00F93D8D /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF34C1E1EC3212C00F93D8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DF34C201EC3212C00F93D8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +88,11 @@
 				8DF34C271EC3212C00F93D8D /* LaunchScreen.storyboard */,
 				8DF34C2A1EC3212C00F93D8D /* Info.plist */,
 				8DF34C301EC3215800F93D8D /* LoginViewController.swift */,
-				2F0F8AFE1EC9A5B200CDD64D /* WelcomeScreenViewController.swift */,
+				2F144FD31ED4341B00B73F05 /* FeedViewController.swift */,
+				2F144FD51ED4408300B73F05 /* AllFeedsViewController.swift */,
+				2F144FD71ED440A200B73F05 /* MyprofileViewController.swift */,
+				2F144FD91ED440B400B73F05 /* AddimageViewController.swift */,
+				2F144FDB1ED4448A00B73F05 /* TableViewCell.swift */,
 			);
 			path = InstagramClone;
 			sourceTree = "<group>";
@@ -207,7 +219,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -217,9 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F144FD81ED440A200B73F05 /* MyprofileViewController.swift in Sources */,
+				2F144FDC1ED4448A00B73F05 /* TableViewCell.swift in Sources */,
 				8DF34C311EC3215800F93D8D /* LoginViewController.swift in Sources */,
-				2F0F8AFF1EC9A5B200CDD64D /* WelcomeScreenViewController.swift in Sources */,
+				2F144FDA1ED440B400B73F05 /* AddimageViewController.swift in Sources */,
+				2F144FD41ED4341B00B73F05 /* FeedViewController.swift in Sources */,
 				8DF34C211EC3212C00F93D8D /* ViewController.swift in Sources */,
+				2F144FD61ED4408300B73F05 /* AllFeedsViewController.swift in Sources */,
 				8DF34C1F1EC3212C00F93D8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
