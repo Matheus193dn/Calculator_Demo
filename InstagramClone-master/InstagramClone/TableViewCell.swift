@@ -14,8 +14,15 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var userpostedImage: UIImageView!
     @IBOutlet weak var totalLikes: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var commentButton: UIButton!
+    
+    @IBAction func likeButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func commentButton(_ sender: UIButton) {
+        
+    }
+    
     
     
     override func awakeFromNib() {

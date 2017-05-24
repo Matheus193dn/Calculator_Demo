@@ -268,12 +268,6 @@
                                                         <constraint firstAttribute="width" constant="359" id="htg-ph-wDc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqU-f6-qXa">
-                                                    <rect key="frame" x="8" y="267" width="76" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-cY-ZjQ">
                                                     <rect key="frame" x="8" y="234" width="25" height="25"/>
                                                     <constraints>
@@ -282,6 +276,9 @@
                                                         <constraint firstAttribute="width" secondItem="cuc-cY-ZjQ" secondAttribute="height" multiplier="25:25" id="y8k-5e-VBN"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="like"/>
+                                                    <connections>
+                                                        <action selector="likeButton:" destination="Qzq-T5-zoI" eventType="touchUpInside" id="S2X-UU-bAt"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwZ-oI-Yj9">
                                                     <rect key="frame" x="41" y="234" width="25" height="25"/>
@@ -291,7 +288,16 @@
                                                         <constraint firstAttribute="width" constant="25" id="iOr-zO-3Bq"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="comment"/>
+                                                    <connections>
+                                                        <action selector="commentButton:" destination="Qzq-T5-zoI" eventType="touchUpInside" id="fiL-11-Gef"/>
+                                                    </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqU-f6-qXa">
+                                                    <rect key="frame" x="8" y="267" width="76" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Thw-h1-xaP" firstAttribute="trailing" secondItem="2Ym-ep-gFe" secondAttribute="trailingMargin" id="78c-H7-px0"/>
@@ -300,16 +306,15 @@
                                                 <constraint firstItem="6WO-BT-JCv" firstAttribute="top" secondItem="2Ym-ep-gFe" secondAttribute="topMargin" id="DD6-a6-uwj"/>
                                                 <constraint firstItem="6WO-BT-JCv" firstAttribute="trailing" secondItem="2Ym-ep-gFe" secondAttribute="trailingMargin" id="KvE-CI-LPP"/>
                                                 <constraint firstItem="Thw-h1-xaP" firstAttribute="top" secondItem="6WO-BT-JCv" secondAttribute="bottom" constant="8" id="NB6-7I-6t4"/>
+                                                <constraint firstItem="rqU-f6-qXa" firstAttribute="top" secondItem="iwZ-oI-Yj9" secondAttribute="bottom" constant="8" id="VO7-o3-1Yx"/>
                                                 <constraint firstItem="cuc-cY-ZjQ" firstAttribute="leading" secondItem="2Ym-ep-gFe" secondAttribute="leadingMargin" id="Ybg-JE-fEr"/>
                                                 <constraint firstItem="6WO-BT-JCv" firstAttribute="leading" secondItem="2Ym-ep-gFe" secondAttribute="leadingMargin" id="aau-i3-VSo"/>
                                                 <constraint firstItem="cuc-cY-ZjQ" firstAttribute="top" secondItem="Thw-h1-xaP" secondAttribute="bottom" constant="8" id="lAW-xK-Ocj"/>
-                                                <constraint firstItem="rqU-f6-qXa" firstAttribute="leading" secondItem="2Ym-ep-gFe" secondAttribute="leadingMargin" id="sfs-Zd-CCw"/>
+                                                <constraint firstItem="rqU-f6-qXa" firstAttribute="leading" secondItem="2Ym-ep-gFe" secondAttribute="leadingMargin" id="sPP-9P-p2I"/>
                                                 <constraint firstItem="iwZ-oI-Yj9" firstAttribute="top" secondItem="Thw-h1-xaP" secondAttribute="bottom" constant="8" id="z6q-64-4lJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="commentButton" destination="iwZ-oI-Yj9" id="qcw-Gr-sGI"/>
-                                            <outlet property="likeButton" destination="cuc-cY-ZjQ" id="zhD-ZE-DAN"/>
                                             <outlet property="totalLikes" destination="rqU-f6-qXa" id="kEx-dP-EdA"/>
                                             <outlet property="userAvatar" destination="Hkz-NV-5ay" id="48I-U8-14w"/>
                                             <outlet property="usernameLabel" destination="wT3-Ss-lGh" id="yZ0-yR-uR9"/>
